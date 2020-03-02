@@ -21,4 +21,92 @@ public class JavaMapTest {
 		assertEquals(empty.size(), 0);
 		//Assert.assert
 	}
+	
+	
+	@Test
+	public void testInfinite() {
+		MapADT<Integer, String> aMap = new JavaMap<>();
+		for (int i = 0; i<1000000; i++) {
+			aMap.put(i, "Student");
+		}
+		assertEquals(aMap.size(),1000000);
+	}
+	
+	//test put
+	@Test
+	public void testPut() {
+		MapADT<String, String> aMap = new JavaMap<>();
+		 aMap.put("Yifan", "Student");
+		 aMap.put("Crystal", "Student");
+		 aMap.put("JJ", "Professor");
+		assertEquals(aMap.size(),3);
+	}
+	
+	
+	
+	//test put  
+	@Test
+	public void testPutUnique() {
+		MapADT<String, String> aMap = new JavaMap<>();
+		 aMap.put("Yifan", "Student");
+		 aMap.put("Crystal", "Student");
+		 aMap.put("JJ", "Professor");
+		 aMap.put("Crystal", "Professor");
+		assertEquals("Professor", aMap.get("Crystal"));
+	}
+	
+	//test put  
+	@Test
+	public void testPutNull() {
+		MapADT<String, String> aMap = new JavaMap<>();
+		 aMap.put("Yifan", "Student");
+		 aMap.put("Crystal", "Student");
+		 aMap.put(null, "Professor");
+		 assertEquals(aMap.size(), 3);
+	}
+	
+	
+	
+	//test get
+	@Test
+	public void testGet() {
+		MapADT<String, String> aMap = new JavaMap<>();
+		 aMap.put("Yifan", "Student");
+		 aMap.put("Crystal", "Student");
+		 assertEquals("Student", aMap.get("Crystal"));
+	}
+	
+	//test get
+	@Test
+	public void testGetValue() {
+		MapADT<String, String> aMap = new JavaMap<>();
+		 aMap.put("Yifan", "Student");
+		 aMap.put("Crystal", "Student");
+		 assertEquals(null, aMap.get("Student"));
+	}
+	
+	
+	@Test
+	//what should do with the error?
+	public void testRemove() {
+		MapADT<String, String> aMap = new JavaMap<>();
+		 aMap.put("Yifan", "Student");
+		 aMap.remove("Yifan");
+		 assertEquals(aMap.size(),0);
+	}
+	
+	
+	
+	
+//	@Test
+//	public void testRemoveempty() {
+//		MapADT<String, String> aMap = new JavaMap<>();
+//		 aMap.put("Yifan", "Student");
+//		 aMap.remove("Crystal");
+//		 assertEquals(aMap.size(),1);
+//		
+//	}
+		
+	
+	
 }
