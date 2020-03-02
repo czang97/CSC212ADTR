@@ -104,6 +104,14 @@ public class JavaListTest {
 		assertEquals(5, data.size());
 	}
 	
+	// add back 
+	@Test
+	public void testAddToBackMultiple() {
+		ListADT<String> data = makeFullList();
+		data.addBack("z");
+		data.addBack("z");
+		assertEquals(6, data.size());
+	}
 	
 	// test list remove
 	@Test
@@ -231,12 +239,6 @@ public class JavaListTest {
 		data.addIndex(-1, "the");
 	}
 	
-	@Test(expected=BadIndexError.class)
-	public void testRemoveIndexOutofBound() {
-		ListADT<String> data = makeEmptyList();
-		data.addBack("z");
-		data.removeIndex(1);
-	}
 	
 	// TODO write some tests for setIndex.
 	//set index
