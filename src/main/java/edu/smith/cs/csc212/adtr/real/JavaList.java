@@ -86,10 +86,10 @@ public class JavaList<T> extends ListADT<T> {
 		inner.add(0, value);
 	}
 
+	// bug fixed
 	@Override
 	public void addBack(T value) {
-
-		inner.add(inner.size() , value);
+		inner.add(inner.size(), value);
 
 	}
 
