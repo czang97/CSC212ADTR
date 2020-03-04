@@ -48,7 +48,7 @@ public class JavaList<T> extends ListADT<T> {
 	@Override
 	public void setIndex(int index, T value) {
 		checkNotEmpty();
-		checkInclusiveIndex(index); // old: checkExclusiveIndex(index);
+		checkExclusiveIndex(index);
 		if (index == inner.size()) {
 			inner.add(index, value);
 		} else {
