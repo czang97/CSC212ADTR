@@ -43,7 +43,6 @@ public class JavaMapTest {
 	}
 	
 	
-	
 	//test put  
 	@Test
 	public void testPutUnique() {
@@ -92,21 +91,16 @@ public class JavaMapTest {
 		MapADT<String, String> aMap = new JavaMap<>();
 		 aMap.put("Yifan", "Student");
 		 aMap.remove("Yifan");
-		 assertEquals(aMap.size(),0);
+		 assertEquals(0, aMap.size());
 	}
 	
 	
-	
-	
-//	@Test
-//	public void testRemoveempty() {
-//		MapADT<String, String> aMap = new JavaMap<>();
-//		 aMap.put("Yifan", "Student");
-//		 aMap.remove("Crystal");
-//		 assertEquals(aMap.size(),1);
-//		
-//	}
-		
-	
+	@Test
+	public void testRemoveempty() {
+		MapADT<String, String> aMap = new JavaMap<>();
+		 aMap.put("Yifan", "Student");
+		 aMap.remove("Crystal");
+		 assertEquals(1, aMap.size());
+	}
 	
 }

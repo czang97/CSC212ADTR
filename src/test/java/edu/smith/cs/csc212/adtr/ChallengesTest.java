@@ -143,6 +143,7 @@ public class ChallengesTest {
 		expected.put("a", 2);
 		expected.put("b", 2);
 		expected.put("c", 1);
+		
 		//expected.put("d", 0);
 		
 		Assert.assertEquals(null, Challenges.wordCount(example).get("d"));
