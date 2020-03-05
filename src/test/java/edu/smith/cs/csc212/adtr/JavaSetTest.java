@@ -70,13 +70,12 @@ public class JavaSetTest {
 	}
 
 	// test remove
-	// Crystal
+	// Crystal typed
 	@Test
 	public void testremovenull() {
 		SetADT<String> aSet = new JavaSet<>();
 		aSet.insert("Crystal");
 		aSet.remove("Yifan");
-		// assertEquals(aSet.remove("Yifan"));
 		assertEquals(aSet.size(), 1);
 
 	}

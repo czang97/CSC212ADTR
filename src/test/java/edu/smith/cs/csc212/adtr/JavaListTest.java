@@ -90,6 +90,7 @@ public class JavaListTest {
 
 
 	// add back
+	// Crystal
 	@Test
 	public void testAddToBack() {
 		ListADT<String> data = makeFullList();
@@ -99,6 +100,7 @@ public class JavaListTest {
 	}
 
 	// add back
+	// Yifan
 	@Test
 	public void testAddToBackMultiple() {
 		ListADT<String> data = makeFullList();
@@ -107,7 +109,8 @@ public class JavaListTest {
 		assertEquals(6, data.size());
 	}
 
-	// test list remove
+	// test remove
+	//Crystal
 	@Test
 	public void testRemoveBack() {
 		ListADT<String> data = makeFullList();
@@ -115,7 +118,8 @@ public class JavaListTest {
 		assertEquals("c", data.getBack());
 		assertEquals(3, data.size());
 	}
-
+	
+	//Crystal
 	@Test
 	public void testRemoveIndex() {
 		ListADT<String> data = makeFullList();
@@ -123,7 +127,7 @@ public class JavaListTest {
 		assertEquals("b", data.getFront());
 		assertEquals(3, data.size());
 	}
-
+	//Crystal
 	@Test
 	public void testRemoveFront() {
 		ListADT<String> data = makeFullList();
@@ -133,8 +137,9 @@ public class JavaListTest {
 	}
 
 	// test addIndex methods.
-
+	
 	// add Back by index
+	//Yifan
 	@Test
 	public void testaddIndexFront() {
 		ListADT<String> data = makeFullList();
@@ -144,6 +149,7 @@ public class JavaListTest {
 	}
 
 	// add Back by index
+	//Yifan
 	@Test
 	public void testaddIndexMiddle() {
 		ListADT<String> data = makeFullList();
@@ -154,6 +160,7 @@ public class JavaListTest {
 	}
 
 	// add Back by index
+	//Yifan
 	@Test
 	public void testaddIndexBack() {
 		ListADT<String> data = makeFullList();

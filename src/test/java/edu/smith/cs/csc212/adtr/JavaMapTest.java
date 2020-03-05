@@ -19,10 +19,9 @@ public class JavaMapTest {
 	public void testEmpty() {
 		MapADT<String, String> empty = new JavaMap<>();
 		assertEquals(empty.size(), 0);
-		//Assert.assert
 	}
 	
-	
+	//Yifan
 	@Test
 	public void testInfinite() {
 		MapADT<Integer, String> aMap = new JavaMap<>();
@@ -32,6 +31,7 @@ public class JavaMapTest {
 		assertEquals(aMap.size(),1000000);
 	}
 	
+	//Yifan
 	//test put
 	@Test
 	public void testPut() {
@@ -43,6 +43,7 @@ public class JavaMapTest {
 	}
 	
 	
+	//Yifan
 	//test put  
 	@Test
 	public void testPutUnique() {
@@ -54,6 +55,7 @@ public class JavaMapTest {
 		assertEquals("Professor", aMap.get("Crystal"));
 	}
 	
+	//Crystal
 	//test put  
 	@Test
 	public void testPutNull() {
@@ -65,7 +67,7 @@ public class JavaMapTest {
 	}
 	
 	
-	
+	//Crystal
 	//test get
 	@Test
 	public void testGet() {
@@ -75,6 +77,8 @@ public class JavaMapTest {
 		 assertEquals("Student", aMap.get("Crystal"));
 	}
 	
+	
+	//Crystal
 	//test get
 	@Test
 	public void testGetValue() {
@@ -85,8 +89,8 @@ public class JavaMapTest {
 	}
 	
 	
+	//Crystal
 	@Test
-	//what should do with the error?
 	public void testRemove() {
 		MapADT<String, String> aMap = new JavaMap<>();
 		 aMap.put("Yifan", "Student");
@@ -94,7 +98,7 @@ public class JavaMapTest {
 		 assertEquals(0, aMap.size());
 	}
 	
-	
+	//Yifan
 	@Test
 	public void testRemoveempty() {
 		MapADT<String, String> aMap = new JavaMap<>();

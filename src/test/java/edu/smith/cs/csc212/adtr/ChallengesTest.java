@@ -9,6 +9,8 @@ import edu.smith.cs.csc212.adtr.real.JavaSet;
 
 public class ChallengesTest {
 
+	//test union
+	//Crystal typed
 	@Test
 	public void testUnionSimple() {
 		SetADT<String> left = new JavaSet<>();
@@ -26,6 +28,7 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.union(left, right));
 	}
 	
+	//Crystal typed
 	@Test
 	public void testUnionDisjoint() {
 		SetADT<String> left = new JavaSet<>();
@@ -44,6 +47,7 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.union(left, right));
 	}
 	
+	//Crystal typed
 	@Test
 	public void testUnionNested() {
 		SetADT<String> left = new JavaSet<>();
@@ -61,6 +65,8 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.union(left, right));
 	}
 	
+	//test intersect
+	//Yifan tested
 	@Test
 	public void testIntersectionSimple() {
 		SetADT<String> left = new JavaSet<>();
@@ -76,6 +82,7 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.intersection(left, right));
 	}
 	
+	//Yifan tested
 	@Test
 	public void testingIntersectionNull() {
 		SetADT<String> left = new JavaSet<>();
@@ -91,6 +98,7 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.intersection(left, right));
 	}
 	
+	//Yifan tested
 	@Test
 	public void testingIntersectionNullAll() {
 		SetADT<String> left = new JavaSet<>();
@@ -100,6 +108,7 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.intersection(left, right));
 	}
 	
+	//Yifan tested
 	@Test
 	public void testingIntersectionNested() {
 		SetADT<String> left = new JavaSet<>();
@@ -117,7 +126,8 @@ public class ChallengesTest {
 	}
 	
 	
-	
+	//test wordcount
+	//Yifan tested
 	@Test
 	public void testWordCountSimple() {
 		ListADT<String> example = new JavaList<>();
@@ -133,8 +143,9 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.wordCount(example));
 	}
 	
+	//Crystal tested
 	@Test
-	public void testWordCountRepeated() {
+	public void testWordCountNull() {
 		ListADT<String> example = new JavaList<>();
 		for (String word : new String[] {"a", "b", "a", "b", "c"}) {
 			example.addBack(word);
@@ -143,12 +154,7 @@ public class ChallengesTest {
 		expected.put("a", 2);
 		expected.put("b", 2);
 		expected.put("c", 1);
-		
-		//expected.put("d", 0);
-		
+
 		Assert.assertEquals(null, Challenges.wordCount(example).get("d"));
-
-		//Assert.assertEquals(expected, Challenges.wordCount(example));
 	}
-
 }
